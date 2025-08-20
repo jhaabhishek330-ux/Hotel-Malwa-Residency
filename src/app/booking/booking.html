@@ -1,0 +1,44 @@
+<div class="booking-container">
+  <mat-card class="booking-card">
+    <mat-card-header>
+      <mat-card-title>Book Your Stay</mat-card-title>
+      <mat-card-subtitle>Reserve your perfect getaway in just a few steps</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Name</mat-label>
+          <input matInput type="text" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" required>
+        </mat-form-field>
+
+        <div class="date-fields">
+          <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Check-in Date</mat-label>
+            <input matInput type="date" required>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Check-out Date</mat-label>
+            <input matInput type="date" required>
+          </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Guests</mat-label>
+          <input matInput type="number" min="1" placeholder="Number of guests" required>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" class="submit-btn">
+          <mat-icon>hotel</mat-icon>
+          Book Now
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

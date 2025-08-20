@@ -1,0 +1,130 @@
+/* ===================== */
+/* NAVBAR STYLING        */
+/* ===================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Shrink effect when scrolling */
+.navbar.shrink {
+  padding: 0.4rem 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Brand Logo + Name */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.brand-logo {
+  height: 100px;
+  width: auto;
+  border-radius: 6px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+.navbar.shrink .brand-logo {
+  height: 35px;
+}
+.brand-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1a237e;
+  letter-spacing: 0.5px;
+  transition: font-size 0.3s ease;
+}
+.navbar.shrink .brand-name {
+  font-size: 1.1rem;
+}
+
+/* Spacer */
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  gap: 1.2rem;
+}
+.desktop-nav a {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.desktop-nav a:hover {
+  color: #1976d2;
+  background: rgba(25, 118, 210, 0.08);
+}
+.desktop-nav a.active {
+  color: #1976d2;
+  font-weight: 600;
+  border-bottom: 2px solid #1976d2;
+}
+
+/* Hamburger (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  color: #1976d2;
+}
+
+/* ===================== */
+/* MOBILE NAVIGATION     */
+/* ===================== */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  padding: 0.8rem 1rem;
+  border-top: 1px solid #eee;
+  animation: slideDown 0.3s ease;
+}
+.mobile-nav a {
+  padding: 0.8rem 0;
+  font-size: 1rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+.mobile-nav a:hover {
+  color: #1976d2;
+}
+
+/* Slide-down animation for mobile menu */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================== */
+/* RESPONSIVE BEHAVIOR   */
+/* ===================== */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .mobile-nav {
+    display: flex;
+  }
+}
