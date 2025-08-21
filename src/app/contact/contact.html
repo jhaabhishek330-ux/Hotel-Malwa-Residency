@@ -1,28 +1,47 @@
-<div style="max-width:600px;margin:auto;padding:2rem;">
-	<h1 style="font-size:2rem;font-weight:bold;margin-bottom:1rem;">Contact Us</h1>
-	<div style="margin-bottom:1.5rem;">
-		<mat-icon style="vertical-align:middle;color:#1976d2;">location_on</mat-icon>
-		28 Ravishankar Nagar Patrakar Colony Ujjain Madhya Pradesh 456001, Ujjain
-		<br>
-		<mat-icon style="vertical-align:middle;color:#1976d2;">phone</mat-icon>
-		+91-12345-67890
-		<br>
-		<mat-icon style="vertical-align:middle;color:#1976d2;">email</mat-icon>
-		info@malwaresidency.com
-	</div>
-	<form>
-		<mat-form-field appearance="fill" style="width:100%;margin-bottom:1rem;">
-			<mat-label>Your Name</mat-label>
-			<input matInput type="text" required>
-		</mat-form-field>
-		<mat-form-field appearance="fill" style="width:100%;margin-bottom:1rem;">
-			<mat-label>Your Email</mat-label>
-			<input matInput type="email" required>
-		</mat-form-field>
-		<mat-form-field appearance="fill" style="width:100%;margin-bottom:1rem;">
-			<mat-label>Message</mat-label>
-			<textarea matInput rows="4" required></textarea>
-		</mat-form-field>
-		<button mat-raised-button color="primary" type="submit" style="width:100%;">Send Message</button>
-	</form>
+<div class="contact-container">
+  <!-- Contact Info -->
+  <div class="contact-info">
+    <h2>Get in Touch</h2>
+    <p>We’d love to hear from you! Reach out to us directly or fill the form.</p>
+
+    <div class="info-item">
+      <mat-icon>location_on</mat-icon>
+      <span>28 Ravishankar Nagar, Patrakar Colony, Ujjain, MP 456001</span>
+    </div>
+
+    <div class="info-item">
+      <mat-icon>phone</mat-icon>
+      <span>+91-12345-67890</span>
+    </div>
+
+    <div class="info-item">
+      <mat-icon>email</mat-icon>
+      <span>info@malwaresidency.com</span>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="contact-form">
+    <h2>Send a Message</h2>
+    <form>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Your Name</mat-label>
+        <input matInput type="text" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Your Email</mat-label>
+        <input matInput type="email" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Message</mat-label>
+        <textarea matInput rows="4" required></textarea>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" class="submit-btn">
+        Send Message
+      </button>
+    </form>
+  </div>
 </div>
