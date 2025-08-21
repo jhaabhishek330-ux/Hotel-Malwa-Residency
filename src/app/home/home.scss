@@ -1,3 +1,18 @@
+/* Hero Section */
+.hero-container {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Welcome Section */
 .welcome-section {
   max-width: 1000px;
   margin: auto;
@@ -5,96 +20,29 @@
   text-align: center;
   background: linear-gradient(180deg, #fafafa, #fff);
 }
-.welcome-section h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-.welcome-section h2 {
-  font-size: 1.5rem;
-  color: #1976d2;
-  margin-bottom: 1rem;
-}
-.welcome-section p {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 2rem;
-}
-.address-card {
-  margin: 2rem auto;
-  max-width: 600px;
-  background: #f8f8f8;
-}
-
-/* Highlights grid */
-.highlights {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1100px;
-  margin: auto;
-  padding: 2rem 1rem;
-}
-.highlights mat-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px 8px 0 0;
-}
-.highlights mat-card {
-  text-align: center;
-}
-
-/* Call to action */
-.cta {
-  text-align: center;
-  margin: 2rem 0;
-}
-.cta a {
-  font-size: 1.2rem;
-  padding: 0.75rem 2rem;
-}
-.hero-container {
-  width: 100%;
-  height: 60vh;        /* only 60% of screen height */
-  overflow: hidden;
-}
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   /* crop instead of stretch */
-  object-position: center;
-  display: block;
-}
-@media (max-width: 768px) {
-  .hero-container {
-    height: 40vh;      /* smaller on mobile */
-  }
-}
-
 .hotel-name {
   font-size: 3rem;
   font-weight: 800;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   color: #222;
-  line-height: 1.2; /* Prevent overlapping */
+  line-height: 1.3; /* More spacing */
   word-wrap: break-word;
 }
-
 .tagline {
   font-size: 1.6rem;
   color: #1976d2;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem; /* Added more spacing */
 }
-
 .description {
   font-size: 1.15rem;
   color: #555;
   max-width: 750px;
-  margin: 0 auto 2rem;
-  line-height: 1.7;
+  margin: 0 auto 2.5rem; /* Added spacing */
+  line-height: 1.8; /* More readable */
 }
 
+/* Address Card */
 .address-card {
   margin: 2rem auto;
   padding: 1rem;
@@ -106,19 +54,18 @@
   background: #fdfdfd;
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
-
 .address-icon {
   vertical-align: middle;
   color: #d32f2f;
   margin-right: 0.5rem;
 }
-
 .address-text {
   font-size: 1.05rem;
   font-weight: 500;
   color: #333;
 }
 
+/* Call to Action Buttons */
 .cta-buttons {
   margin-top: 2rem;
   display: flex;
@@ -126,7 +73,6 @@
   gap: 1rem;
   flex-wrap: wrap;
 }
-
 .cta-btn {
   font-size: 1.1rem;
   padding: 0.75rem 2rem;
@@ -134,30 +80,10 @@
   font-weight: 600;
   transition: transform 0.2s ease-in-out;
 }
-
 .cta-btn:hover {
   transform: translateY(-3px);
 }
 
-/* ✅ Mobile Responsive Fix */
-@media (max-width: 768px) {
-  .hotel-name {
-    font-size: 2rem;  /* smaller heading */
-    line-height: 1.3;
-  }
-  .tagline {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  .description {
-    font-size: 1rem;
-    padding: 0 0.5rem;
-  }
-  .address-card {
-    flex-direction: column;
-    text-align: center;
-  }
-}
 /* Highlights Section */
 .highlights {
   display: grid;
@@ -167,7 +93,6 @@
   margin: 3rem auto;
   padding: 0 1rem;
 }
-
 .highlight-card {
   border-radius: 16px;
   overflow: hidden;
@@ -179,40 +104,58 @@
   flex-direction: column;
   height: 100%;
 }
-
 .highlight-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
-
 .highlight-img {
   width: 100%;
   height: 200px;
   overflow: hidden;
 }
-
 .highlight-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
-
 .highlight-card:hover img {
   transform: scale(1.05);
 }
-
 .highlight-card h2 {
   font-size: 1.4rem;
   font-weight: 700;
   margin: 0.5rem 0;
   color: #222;
 }
-
 .highlight-card p {
   font-size: 1rem;
   color: #555;
   line-height: 1.5;
 }
 
-
+/* Mobile Responsive Fix */
+@media (max-width: 768px) {
+  .hero-container {
+    height: 40vh;
+  }
+  .hotel-name {
+    font-size: 2rem;
+    line-height: 1.4; /* Increase spacing */
+    margin-bottom: 0.8rem;
+  }
+  .tagline {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem; /* More spacing */
+  }
+  .description {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+  .address-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}

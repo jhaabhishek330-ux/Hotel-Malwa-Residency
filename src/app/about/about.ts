@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
+import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-about',
-  imports: [MatCardModule],
+  standalone: true,
+  imports: [CommonModule, MatIconModule], // Required for <mat-icon> and directives
   templateUrl: './about.html',
-  styleUrl: './about.scss'
+  styleUrls: ['./about.scss'] // ✅ fixed typo
 })
-export class About {
-
-}
+export class About { }  // Keep class name as About

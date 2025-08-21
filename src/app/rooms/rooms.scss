@@ -1,33 +1,118 @@
-.room-img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 8px 8px 0 0;
-}
-
-.mat-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 0;
-  min-height: 400px;
-  max-width: 350px;
+.rooms-container {
+  max-width: 1200px;
   margin: auto;
+  padding: 2rem 1rem;
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
 }
 
-/* Ensure all cards are the same height in the grid */
-.grid {
+.rooms-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
 
-@media (max-width: 768px) {
-  .room-img {
-    height: 160px;
+.room-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   }
-  .mat-card {
-    max-width: 100%;
-    min-height: 320px;
+}
+
+.room-img {
+  position: relative;
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
   }
+  &:hover img {
+    transform: scale(1.05);
+  }
+
+  .availability {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 0.45rem 1rem;
+    border-radius: 25px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+
+    &.Available {
+      background: linear-gradient(135deg, #4caf50, #43a047);
+    }
+
+    &.Few\ Left {
+      background: linear-gradient(135deg, #ffb74d, #ff9800);
+    }
+
+    &.Sold\ Out {
+      background: linear-gradient(135deg, #e57373, #f44336);
+    }
+
+    .status-icon {
+      font-size: 1.1rem;
+    }
+
+    transition: transform 0.2s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.room-content {
+  padding: 1.5rem;
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .ratings {
+    margin-bottom: 0.5rem;
+    mat-icon { vertical-align: middle; }
+  }
+  p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .price {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    .old-price {
+      text-decoration: line-through;
+      color: #999;
+      margin-right: 0.5rem;
+    }
+    .current-price {
+      color: #1976d2;
+    }
+  }
+  button {
+    width: 100%;
+  }
+}
+
+@media(max-width:768px){
+  .room-img img { height: 160px; }
+  .availability { font-size: 0.8rem; padding: 0.25rem 0.6rem; }
 }
