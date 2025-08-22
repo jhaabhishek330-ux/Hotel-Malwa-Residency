@@ -4,13 +4,16 @@
     <div class="room-card" *ngFor="let room of rooms">
       <div class="room-img">
         <img [src]="room.image" [alt]="room.name">
-        <span class="availability" [ngClass]="room.status">
+
+        <!-- Modern Status Badge -->
+        <span class="availability" [ngClass]="room.status.replace(' ', '-')">
           <mat-icon class="status-icon" *ngIf="room.status==='Available'">check_circle</mat-icon>
           <mat-icon class="status-icon" *ngIf="room.status==='Sold Out'">cancel</mat-icon>
           <mat-icon class="status-icon" *ngIf="room.status==='Few Left'">warning</mat-icon>
           {{ room.status }}
         </span>
       </div>
+
       <div class="room-content">
         <h2>{{ room.name }}</h2>
         <div class="ratings">

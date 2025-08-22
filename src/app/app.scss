@@ -227,37 +227,3 @@ body {
   .brand-name { font-size: 1.1rem; }
   .welcome-section .hotel-name { font-size: 1.8rem; }
 }
-
-.mobile-nav-slide {
-  position: fixed;
-  top: 0;
-  right: -100%;  // Hide menu off-screen on the right
-  width: 250px;   // Menu width
-  height: 100vh;
-  background: #fff;
-  box-shadow: -4px 0 20px rgba(0,0,0,0.2);  // shadow on the left
-  display: flex;
-  flex-direction: column;
-  padding-top: 4rem;
-  gap: 1rem;
-  transition: right 0.3s ease-in-out;
-  z-index: 1000;
-
-  a {
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    color: #222;
-    text-decoration: none;
-
-    &:hover {
-      background: #1976d2;
-      color: #fff;
-      border-radius: 6px;
-    }
-  }
-
-  &.open {
-    right: 0;  // Slide into view from the right
-  }
-}
-

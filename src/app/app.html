@@ -26,8 +26,8 @@
   </button>
 </mat-toolbar>
 
-<!-- Mobile Nav sliding from left -->
-<nav class="mobile-nav-slide" [class.open]="menuOpen">
+<!-- Mobile Nav -->
+<nav class="mobile-nav" *ngIf="menuOpen">
   <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="menuOpen=false">Home</a>
   <a mat-button routerLink="/rooms" routerLinkActive="active" (click)="menuOpen=false">Rooms</a>
   <a mat-button routerLink="/gallery" routerLinkActive="active" (click)="menuOpen=false">Gallery</a>
@@ -35,8 +35,6 @@
   <a mat-button routerLink="/about" routerLinkActive="active" (click)="menuOpen=false">About</a>
   <a mat-button routerLink="/contact" routerLinkActive="active" (click)="menuOpen=false">Contact</a>
 </nav>
-
-
 
 <!-- Dynamic Page -->
 <div class="page-container">
